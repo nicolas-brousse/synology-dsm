@@ -1,4 +1,5 @@
 var app = require('app');  // Module to control application life.
+var fs = require('fs');
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
 
 // Report crashes to our server.
@@ -20,6 +21,8 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600});
+
+  // fs.readFileSync('./domain');
 
   // and load the index.html of the app.
   mainWindow.loadUrl('https://cloud.nicolas-brousse.net:5051');
